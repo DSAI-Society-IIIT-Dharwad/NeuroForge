@@ -1,0 +1,65 @@
+.hero-section {
+  min-height: 90vh;
+  background: linear-gradient(135deg, #F9F8F6 0%, #FFFFFF 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(26, 67, 49, 0.1);
+}
+
+.btn-primary {
+  background-color: #1A4331;
+  color: white;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #133124;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: rgba(229, 226, 220, 0.3);
+  color: #1C1C1C;
+  border: 1px solid #E5E2DC;
+  transition: background-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(229, 226, 220, 0.5);
+}
+
+.conversation-message {
+  animation: slide-in 0.3s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.recording-indicator {
+  position: relative;
+}
+.recording-indicator::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #C86A53;
+  border-radius: 50%;
+  animation: recording-pulse 1.5s ease-in-out infinite;
+}
